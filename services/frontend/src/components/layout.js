@@ -46,13 +46,11 @@ class Layout extends Component {
     return (
       <div className={classes.root}>
         <MainTopBar handleDrawerToggle={this.handleDrawerToggle} />
-        <Hidden mdUp>
-          <MainDrawer
-            variant='mobile'
-            open={this.state.mobileNavOpen}
-            onClose={this.handleDrawerToggle}
-          />
-        </Hidden>
+        <MainDrawer
+          variant='mobile'
+          open={this.state.mobileNavOpen}
+          onClose={this.handleDrawerToggle}
+        />
         <Hidden smDown implementation='css'>
           <MainDrawer />
         </Hidden>
